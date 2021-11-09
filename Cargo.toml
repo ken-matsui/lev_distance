@@ -1,0 +1,11 @@
+[package]
+name = "lev_distance"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
+description = "A copy of Levenshtein distance implementation from Rust Compiler"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ken-matsui/lev_distance/"
+homepage = "https://github.com/ken-matsui/lev_distance#readme"
+documentation = "https://docs.rs/lev_distance"
