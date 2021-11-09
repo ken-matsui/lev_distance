@@ -197,4 +197,70 @@ mod tests {
             Some("a_longer_variable_name".to_string())
         );
     }
+
+    #[test]
+    fn test_find_best_match_for_name_from_strings() {
+        let input = vec!["aaab".to_string(), "aaabc".to_string()];
+        assert_eq!(
+            find_best_match_for_name(input.iter(), "aaaa", None),
+            Some("aaab".to_string())
+        );
+
+        assert_eq!(
+            find_best_match_for_name(input.iter(), "1111111111", None),
+            None
+        );
+
+        let input = vec!["AAAA".to_string()];
+        assert_eq!(
+            find_best_match_for_name(input.iter(), "aaaa", None),
+            Some("AAAA".to_string())
+        );
+
+        let input = vec!["AAAA".to_string()];
+        assert_eq!(
+            find_best_match_for_name(input.iter(), "aaaa", Some(4)),
+            Some("AAAA".to_string())
+        );
+
+        let input = vec!["a_longer_variable_name".to_string()];
+        assert_eq!(
+            find_best_match_for_name(input.iter(), "a_variable_longer_name", None),
+            Some("a_longer_variable_name".to_string())
+        );
+    }
+
+    #[test]
+    fn test_find_best_match_for_name_from_hashset() {
+        use std::collections::HashSet;
+
+        let input: HashSet<&str> = vec!["aaab", "aaabc"].into_iter().collect();
+        assert_eq!(
+            find_best_match_for_name(input.iter(), "aaaa", None),
+            Some("aaab".to_string())
+        );
+
+        assert_eq!(
+            find_best_match_for_name(input.iter(), "1111111111", None),
+            None
+        );
+
+        let input: HashSet<&str> = vec!["AAAA"].into_iter().collect();
+        assert_eq!(
+            find_best_match_for_name(input.iter(), "aaaa", None),
+            Some("AAAA".to_string())
+        );
+
+        let input: HashSet<&str> = vec!["AAAA"].into_iter().collect();
+        assert_eq!(
+            find_best_match_for_name(input.iter(), "aaaa", Some(4)),
+            Some("AAAA".to_string())
+        );
+
+        let input: HashSet<&str> = vec!["a_longer_variable_name"].into_iter().collect();
+        assert_eq!(
+            find_best_match_for_name(input.iter(), "a_variable_longer_name", None),
+            Some("a_longer_variable_name".to_string())
+        );
+    }
 }
