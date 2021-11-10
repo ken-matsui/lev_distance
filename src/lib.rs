@@ -145,7 +145,7 @@ fn sort_by_words(name: &str) -> String {
 
 #[cfg(test)]
 mod tests {
-    use crate::*;
+    use super::*;
 
     #[test]
     fn test_lev_distance() {
