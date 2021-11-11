@@ -15,7 +15,7 @@ fn main() {
     let lookup = "aa";
     
     if let Some(sugg) = match find_best_match_for_name(v.iter(), "aa", None) {
-        Some(sugg) if sugg == name => None,
+        Some(sugg) if sugg == lookup => None,
         sugg => sugg,
     } {
         println!("Did you mean `{}`?", sugg);
