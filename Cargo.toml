@@ -1,6 +1,6 @@
 [package]
 name = "lev_distance"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Ken Matsui <26405363+ken-matsui@users.noreply.github.com>"]
 description = "A copy of Levenshtein distance implementation from Rust Compiler"
