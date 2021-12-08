@@ -29,7 +29,7 @@ Did you mean `aaa`?
 
 ## [LICENSE](https://github.com/ken-matsui/lev_distance/blob/main/src/lib.rs#L1-L26)
 
-This package is released under the MIT license from [Rust Compiler](https://github.com/rust-lang/rust/blob/0fb1c371d4a14f9ce7a721d8aea683a6e6774f6c/compiler/rustc_span/src/lev_distance.rs).
+This package is released under the [MIT license](https://github.com/rust-lang/rust/blob/master/COPYRIGHT) from [Rust Compiler](https://github.com/rust-lang/rust/blob/0fb1c371d4a14f9ce7a721d8aea683a6e6774f6c/compiler/rustc_span/src/lev_distance.rs).
 
 ### Rust Compiler
 
